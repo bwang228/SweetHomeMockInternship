@@ -78,6 +78,11 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
     recentFilters = new WeakHashMap<String, byte[][]>();
   }
 
+  @Override
+  public float getVolume() {
+    return getWidth() * getDepth() * getHeight();
+  }
+
   /**
    * Creates a catalog piece of furniture.
    * @param name  the name of the new piece
